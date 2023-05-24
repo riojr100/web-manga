@@ -19,3 +19,4 @@ root.render(
 
 // API manga
 // https://manga-qvb4j6c86-riojr100.vercel.app/
+// https://docs.consumet.org/rest-api/Manga/mangadex/get-manga-chapter-pages
