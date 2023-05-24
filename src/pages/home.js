@@ -49,7 +49,7 @@ export default function Home(props) {
       {/* Home */}
       <section className="home" id="home">
         <div className="content">
-          <h3>Karya </h3>
+          <h3>Karya Koleksi</h3>
 
           <h1>
             <br />
