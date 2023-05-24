@@ -13,3 +13,6 @@ root.render(
 // localStorage : Penyimpanan di %LocalAppData%, di close akan save.
 // https://www.w3schools.com/jsref/prop_win_sessionstorage.asp
 // https://www.w3schools.com/jsref/prop_win_localstorage.asp
+
+// API manga
+// https://manga-qvb4j6c86-riojr100.vercel.app/
