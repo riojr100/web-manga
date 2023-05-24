@@ -1,81 +1,89 @@
-import React from "react";
+// import React from "react";
 
-const AboutUs = () => {
-  const members = [
-    {
-      name: "Reinhard Javera Maheswara",
-      image: "../gambar/reinhard.jpg",
-      nim: "00000077732",
-    },
-    {
-      name: "Rio Joan Rinaldo",
-      image: "../gambar/rio.jpg",
-      nim: "00000078315",
-    },
-    {
-      name: "Darryl Kurniawan",
-      image: "../gambar/daril.jpg",
-      nim: "00000078767",
-    },
-    {
-      name: "Muhammad Tristan Ajibrilyan Nandipinto",
-      image: "../gambar/tristan.jpg",
-      nim: "00000078653",
-    },
-  ];
+// const AboutUs = () => {
+//   const members = [
+//     {
+//       name: "Reinhard Javera Maheswara",
+//       image: "../gambar/reinhard.jpg",
+//       nim: "00000077732",
+//     },
+//     {
+//       name: "Rio Joan Rinaldo",
+//       image: "../gambar/rio.jpg",
+//       nim: "00000078315",
+//     },
+//     {
+//       name: "Darryl Kurniawan",
+//       image: "../gambar/daril.jpg",
+//       nim: "00000078767",
+//     },
+//     {
+//       name: "Muhammad Tristan Ajibrilyan Nandipinto",
+//       image: "../gambar/tristan.jpg",
+//       nim: "00000078653",
+//     },
+//   ];
 
+//   return (
+//     <div className="container">
+//       <div className="row">
+//         <footer id="footerAboutUs">
+//           <h2 className="mt-3 text-center">About Us</h2>
+//         </footer>
+//       </div>
+//       <div className="row mt-4 d-flex justify-content-center">
+//         {members.map((member, index) => (
+//           <div
+//             className="col-md-6 d-flex justify-content-center"
+//             key={index}
+//             id={`aboutUs${member.name.split(" ")[0]}`}
+//           >
+//             <div className="card mx-1 kartu">
+//               <img
+//                 className="card-img-top"
+//                 src={member.image}
+//                 alt={member.name}
+//                 id={member.name.split(" ")[0]}
+//                 data-bs-toggle="modal"
+//                 data-bs-target="#ImagePreview"
+//               />
+
+//               <div className="card-body">
+//                 <p
+//                   className="card-text-center pt-2"
+//                   id={`nim${member.name.split(" ")[0]}`}
+//                 >
+//                   {member.name}
+//                   <br />
+//                   {member.nim}
+//                 </p>
+//               </div>
+//             </div>
+//           </div>
+//         ))}
+//       </div>
+//       <b r />
+//       <br />
+//       <hr
+//         styl
+//         e={{
+//           height: "10px",
+//           borderWidth: "10px",
+//           borderRadius: "10px",
+//           color: "#ffffff",
+//           backgroundColor: "#0044aa",
+//         }}
+//       />
+//     </div>
+//   );
+// };
+
+// export default AboutUs;
+
+export default function AboutUs() {
   return (
-    <div className="container">
-      <div className="row">
-        <footer id="footerAboutUs">
-          <h2 className="mt-3 text-center">About Us</h2>
-        </footer>
-      </div>
-      <div className="row mt-4 d-flex justify-content-center">
-        {members.map((member, index) => (
-          <div
-            className="col-md-6 d-flex justify-content-center"
-            key={index}
-            id={`aboutUs${member.name.split(" ")[0]}`}
-          >
-            <div className="card mx-1 kartu">
-              <img
-                className="card-img-top"
-                src={member.image}
-                alt={member.name}
-                id={member.name.split(" ")[0]}
-                data-bs-toggle="modal"
-                data-bs-target="#ImagePreview"
-              />
-
-              <div className="card-body">
-                <p
-                  className="card-text-center pt-2"
-                  id={`nim${member.name.split(" ")[0]}`}
-                >
-                  {member.name}
-                  <br />
-                  {member.nim}
-                </p>
-              </div>
-            </div>
-          </div>
-        ))}
-      </div>
-      <b r />
-      <br />
-      <hr
-        styl
-        e={{
-          height: "10px",
-          borderWidth: "10px",
-          borderRadius: "10px",
-          color: "#ffffff",
-          backgroundColor: "#0044aa",
-        }}
-      />
-    </div>
+    <>
+      <p>hi</p>
+    </>
   );
-};
-
-export default AboutUs;
+}
