@@ -6,8 +6,8 @@ export default function Header(props) {
       </a>
 
       <nav className="navbar">
-        <a href="#home">Home</a>
-        <a href="#about">About Us</a>
+        <a href="/">Home</a>
+        <a href="/aboutus">About Us</a>
         <a href="#gallery">Highlight</a>
         <a href="#lukisan">Gallery</a>
         <a href="#contact">Contact</a>
