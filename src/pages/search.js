@@ -55,18 +55,19 @@ export default function Search() {
           </button>
         </div>
         <div className="searchContent">
-          <SearchCard />
+          {/* <SearchCard /> */}
           {/* Res : */}
 
-          {/* {useEffect(() => {
-              // console.log(arrayValue);
-              if (arrayValue.length > 1) {
+          {useEffect(() => {
+            if (arrayValue != null) {
+              if (arrayValue[0] != null) {
                 console.log(arrayValue);
-                arrayValue.map(printCards);
+                // arrayValue.map(printCards);
               } else {
-                console.log("Error");
+                console.log("Empty");
               }
-            }, arrayValue)} */}
+            }
+          }, arrayValue)}
         </div>
       </div>
     </React.StrictMode>
