@@ -10,6 +10,7 @@ export default function App() {
     <Routes>
       <Route path="/" element={<Home />} />
       <Route path="/aboutus" element={<Aboutus />} />
+      {/* <Route path="/review" element={<Review />} /> */}
     </Routes>
   );
 }
