@@ -4,25 +4,6 @@ import Header from "../component/header";
 import ImageWave from "../gambar/bottom_wave.png";
 // import { Swiper } from "https://unpkg.com/swiper@7/swiper-bundle.min.css";
 
-function loginButton() {
-  let login = document.querySelector(".login-form");
-  let navbar = document.querySelector(".header .navbar");
-  login.classList.toggle("active");
-  navbar.classList.remove("active");
-}
-function menuButton() {
-  let login = document.querySelector(".login-form");
-  let navbar = document.querySelector(".header .navbar");
-  login.classList.remove("active");
-  navbar.classList.toggle("active");
-}
-window.onscroll = () => {
-  let login = document.querySelector(".login-form");
-  let navbar = document.querySelector(".header .navbar");
-  login.classList.remove("active");
-  navbar.classList.remove("active");
-};
-
 // var swiper = new Swiper(".gallery-slider", {
 //   grabCursor: true,
 //   loop: true,
@@ -45,22 +26,24 @@ window.onscroll = () => {
 export default function Home(props) {
   return (
     <React.StrictMode>
-      <Header loginClick={loginButton} menuClick={menuButton} />
+      <div className="lol" id="lol">
+        <img src="https://media.tenor.com/_hUq1BSUsiMAAAAS/cat-cute.gif" />
+      </div>
+      <Header />
       {/* Home */}
       <section className="home" id="home">
         <div className="content">
-          <h3>Karya Lukisan</h3>
+          <h3>U-Manga Log</h3>
 
           <h1>
             <br />
-            Kunjungi dan Nikmati
+            Kunjungi dan Lihat
             <br />
-            Lukisan Dari Indonesia
+            Manga serta Komik dengan
+            <br />
+            Berbagai bahasa
           </h1>
-          <a
-            href="https://en.m.wikipedia.org/wiki/Indonesian_painting"
-            className="btn"
-          >
+          <a href="https://id.wikipedia.org/wiki/Manga" className="btn">
             Jelajahi Lebih
           </a>
         </div>
@@ -73,7 +56,7 @@ export default function Home(props) {
         <div className="box-container">
           <div className="image">
             <img
-              src="https://www.dewimagazine.com/img/images/DEWI%20MAGAZINE%20-%20Hendra%20Gunawan-Pengantin%20Revolusi%281%29.jpg"
+              src="https://static.tvtropes.org/pmwiki/pub/images/saitama3_zps996d9485.png"
               alt=""
             />
           </div>
@@ -81,9 +64,11 @@ export default function Home(props) {
           <div className="content">
             <h3 className="title">Informasi</h3>
             <p>
-              Website kami adalah website museum online yang menampilkan
-              lukisan-lukisan dari pelukis atau artist di Indonesia. Website ini
-              juga kami buat menggunakan HTML dan JavaScript.
+              Website kami adalah website untuk mengetahui berbagai informasi
+              mengenai manga yang ingin kita cari. Tujuan dari website ini
+              adalah agar orang - orang yang tertarik dengan manga dan komik
+              dapat mencari informasi tentang manga dan komik yang ingin mereka
+              cari. Website ini juga kami buat menggunakan React dan CSS.
             </p>
           </div>
         </div>
@@ -97,13 +82,19 @@ export default function Home(props) {
           <div className="swiper-wrapper">
             <div className="swiper-slide slide">
               <div className="image">
-                <img src={require("../gambar/galeri.jpg")} alt="" />
+                <img
+                  src="https://media.tenor.com/qkPV6_DL-NAAAAAd/bocchi-the-rock-bocchi.gif"
+                  alt=""
+                />
               </div>
             </div>
 
             <div className="swiper-slide slide">
               <div className="image">
-                <img src={require("../gambar/galeri2.jpg")} alt="" />
+                <img
+                  src="https://i.pinimg.com/originals/b7/65/ec/b765ecf0e2ff088b462e513e4d6b8b1a.jpg"
+                  alt=""
+                />
               </div>
             </div>
 

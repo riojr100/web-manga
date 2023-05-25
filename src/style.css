@@ -17,7 +17,7 @@
   border: none;
   text-decoration: none;
   text-transform: capitalize;
-  transition: 0.2s linear;
+  transition: 0.09s linear;
 }
 
 html {
@@ -42,6 +42,13 @@ html::-webkit-scrollbar-thumb {
 
 section {
   padding: 8rem 7%;
+}
+
+.container {
+  width: 100%;
+  height: max-content;
+  margin-top: 6.5rem;
+  display: flex;
 }
 
 .heading {
@@ -86,6 +93,29 @@ section {
   width: 100%;
 }
 
+.lol {
+  position: fixed;
+  right: 5px;
+  bottom: 5px;
+  z-index: 1000;
+  animation: lolmove 5s infinite;
+  animation-direction: alternate;
+}
+
+.lol img {
+  height: 100px;
+  width: 100px;
+}
+
+@keyframes lolmove {
+  from {
+    bottom: 1px;
+  }
+  to {
+    bottom: 10px;
+  }
+}
+
 /* HEADER */
 
 .header {
@@ -115,7 +145,7 @@ section {
 }
 
 .header .logo:hover {
-  color: var(--main);
+  color: var(--black);
 }
 
 .header .logo i {
@@ -208,9 +238,10 @@ section {
 
 .home {
   min-height: 100vh;
-  display: flex;
   align-items: center;
-  background: url(gambar/backgroundberanda.jpg) no-repeat;
+  display: flex;
+  background: url(https://images2.imgbox.com/3d/1a/yFrizTqm_o.png) no-repeat;
+  opacity: 80%;
   background-size: cover;
   background-position: top;
 }
@@ -224,6 +255,7 @@ section {
   font-family: "Montserrat", sans-serif;
   font-size: 6rem;
   font-weight: 600;
+  text-shadow: 5px 5px 8px black;
 }
 
 .home .content h1 {
@@ -231,12 +263,13 @@ section {
   font-family: "Montserrat", sans-serif;
   font-size: 3rem;
   line-height: 1.4;
-  font-weight: 300;
+  font-weight: 490;
+  text-shadow: 5px 5px 8px black;
 }
 
 .home .wave {
   position: absolute;
-  bottom: 0;
+  bottom: -2rem;
   left: 0;
   width: 100%;
   height: 12rem;
@@ -656,4 +689,175 @@ section {
   .home .content h3 {
     font-size: 4rem;
   }
+}
+
+/* search.js */
+@media (max-width: 705px) {
+  .searchBar {
+    width: 40rem;
+  }
+  .searchContent {
+    width: 65rem;
+    flex-direction: column !important;
+    align-items: center;
+  }
+}
+@media (max-width: 400px) {
+  .searchBar {
+    width: 35rem;
+  }
+}
+.dimScreen {
+  position: fixed;
+  padding: 0;
+  margin: 0;
+
+  z-index: -1;
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  height: 100%;
+  background: rgb(96, 4, 4);
+}
+.container-search {
+  width: 100%;
+  height: max-content;
+  margin-top: 6.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.searchBar,
+.searchButton {
+  background-color: rgba(0, 100, 166, 0.838);
+  color: rgb(197, 197, 197);
+  padding: 15px;
+  height: 50px;
+}
+.searchBar {
+  width: 65rem;
+}
+.searchButton {
+  padding-left: 2px;
+  padding-right: 0;
+  width: 40px;
+  transition: color 0.1s linear, background-color 0.3s linear;
+}
+.searchButton:hover {
+  color: rgb(255, 255, 255);
+  background-color: rgba(0, 87, 145, 0.838);
+}
+.searchBar::placeholder {
+  color: #ffffffb6;
+}
+.searchForm {
+  display: flex;
+  justify-content: center;
+  padding-top: 5rem;
+  width: 100%;
+}
+.searchContent {
+  width: 1110px;
+  flex-wrap: wrap;
+  padding-top: 2rem;
+  display: flex;
+  flex-direction: row;
+  gap: 15px;
+}
+
+/* End of search.js */
+/* searchCard.jsx */
+.search-card,
+.search-card-image {
+  background-color: white;
+  width: 36rem;
+  height: 44rem;
+  border-radius: 10px;
+}
+.search-card {
+  margin-top: 10px;
+}
+.search-card-title h2 {
+  width: 100%;
+
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+
+  font-size: large;
+  padding-left: 2px;
+  padding-right: 2px;
+  padding-top: 6px;
+  padding-bottom: 4px;
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(0, 0, 0, 1) 23%
+  );
+  color: white;
+  position: relative;
+  top: -2.42rem;
+  border-bottom-right-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+
+/* End of searchCard.jsx */
+
+/* Footer about us */
+
+.footerAboutUs {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  text-align: center;
+  background-color: white;
+  z-index: 1;
+  padding: 16px;
+  margin-top: 10rem;
+}
+
+.footerAboutUs p {
+  margin: 0;
+  text-align: center;
+  font-size: 5rem;
+  font-family: sans-serif;
+  font-weight: bold;
+}
+
+.member-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 25rem;
+}
+
+.member-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 16px;
+  padding: 16px;
+  width: 200px;
+  height: 300px;
+  border-radius: 10px;
+  background: #493e7e;
+  box-shadow: 17px 17px 51px #322b57, -17px -17px 51px #6051a5;
+}
+
+.member-card img {
+  width: 100%;
+  height: auto;
+  border-radius: 50%;
+  margin-bottom: 16px;
+}
+
+.member-card h3,
+.member-card p {
+  text-align: center;
+  margin: 0;
+  font-size: 15px;
+  color: white;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }

@@ -1,29 +1,38 @@
+function loginButton() {
+  let login = document.querySelector(".login-form");
+  let navbar = document.querySelector(".header .navbar");
+  login.classList.toggle("active");
+  navbar.classList.remove("active");
+}
+function menuButton() {
+  let login = document.querySelector(".login-form");
+  let navbar = document.querySelector(".header .navbar");
+  login.classList.remove("active");
+  navbar.classList.toggle("active");
+}
+window.onscroll = () => {
+  let login = document.querySelector(".login-form");
+  let navbar = document.querySelector(".header .navbar");
+  login.classList.remove("active");
+  navbar.classList.remove("active");
+};
+
 export default function Header(props) {
   return (
     <header className="header">
       <a href="#" className="logo">
-        <i className="fas fa-paint-brush"></i> ART MUSEUM
+        <i className="fas fa-book"></i> U-MangaLog
       </a>
 
       <nav className="navbar">
         <a href="/">Home</a>
+        <a href="/search">Search</a>
         <a href="/aboutus">About Us</a>
-        <a href="#gallery">Highlight</a>
-        <a href="#lukisan">Gallery</a>
-        <a href="#contact">Contact</a>
       </nav>
 
       <div className="icons">
-        <div
-          id="login-btn"
-          className="fas fa-user"
-          onClick={props.loginClick}
-        ></div>
-        <div
-          id="menu-btn"
-          className="fas fa-bars"
-          onClick={props.menuClick}
-        ></div>
+        <div id="login-btn" className="fas fa-user" onClick={loginButton}></div>
+        <div id="menu-btn" className="fas fa-bars" onClick={menuButton}></div>
       </div>
       <form action="" className="login-form">
         <h3>login</h3>
