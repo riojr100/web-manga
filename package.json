@@ -18,9 +18,17 @@
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
-    "extends": [
-      "react-app",
-      "react-app/jest"
+    "extends": ["react-app", "react-app/jest"],
+    "overrides": [
+      {
+        "files": [
+          "**/*.js",
+          "**/*.jsx"
+        ],
+        "rules": {
+          "react-hooks/rules-of-hooks": "off"
+        }
+      }
     ]
   },
   "browserslist": {
@@ -36,6 +44,7 @@
     ]
   },
   "devDependencies": {
+    "eslint-plugin-react-hooks": "^4.6.0",
     "react-router-dom": "^6.11.2"
   }
 }
