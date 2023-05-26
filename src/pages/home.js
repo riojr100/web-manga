@@ -3,7 +3,9 @@ import "../style.css";
 import Header from "../component/header";
 import ImageWave from "../gambar/bottom_wave.png";
 // import { Swiper } from "https://unpkg.com/swiper@7/swiper-bundle.min.css";
-
+import Swiper from "../component/Slider";
+import Slides from "../slides.json";
+import Slider from "../component/Slider";
 // var swiper = new Swiper(".gallery-slider", {
 //   grabCursor: true,
 //   loop: true,
@@ -27,7 +29,8 @@ export default function Home(props) {
   return (
     <React.StrictMode>
       <div className="lol" id="lol">
-        <img src="https://media.tenor.com/_hUq1BSUsiMAAAAS/cat-cute.gif" />
+        <a href="gacor777.org"></a>
+        <img src="https://res.cloudinary.com/dm6cjn57q/image/upload/v1671276133/hasilslot_ysxmvi.gif" />
       </div>
       <Header />
       {/* Home */}
@@ -37,17 +40,22 @@ export default function Home(props) {
 
           <h1>
             <br />
-            Kunjungi dan Lihat
+            Selamat datang!
             <br />
-            Manga serta Komik dengan
+            Lihat dan review manga yang
             <br />
-            Berbagai bahasa
+            menarik dan trending saat ini!
+            <br />
+            <br />
           </h1>
-          <a href="https://id.wikipedia.org/wiki/Manga" className="btn">
-            Jelajahi Lebih
+          <a
+            href="https://id.wikipedia.org/wiki/Manga"
+            className="btn"
+            alt="Klik untuk general info tentang manga"
+          >
+            Apa Itu Manga?
           </a>
         </div>
-
         <img src={ImageWave} alt="" className="wave" />
       </section>
       {/* End of Home */}
@@ -55,30 +63,35 @@ export default function Home(props) {
       <section className="about" id="about">
         <div className="box-container">
           <div className="image">
-            <img
-              src="https://static.tvtropes.org/pmwiki/pub/images/saitama3_zps996d9485.png"
-              alt=""
-            />
+            <img src="https://images2.imgbox.com/d0/26/Ik28DvL2_o.png" alt="" />
           </div>
 
           <div className="content">
             <h3 className="title">Informasi</h3>
+            <br />
             <p>
               Website kami adalah website untuk mengetahui berbagai informasi
               mengenai manga yang ingin kita cari. Tujuan dari website ini
               adalah agar orang - orang yang tertarik dengan manga dan komik
               dapat mencari informasi tentang manga dan komik yang ingin mereka
-              cari. Website ini juga kami buat menggunakan React dan CSS.
+              cari.
+              <br />
+              Website ini terdapat highlight manga yang trending; Search bar
+              untuk mencari manga yang Anda inginkan; dan About Us untuk
+              informasi mengenai developer website ini. Website ini juga kami
+              buat menggunakan React dan CSS.
             </p>
           </div>
         </div>
       </section>
       {/* End of About */}
-      {/* Gallery */}
-      <section className="gallery" id="gallery">
-        <h2 className="heading">Galeri</h2>
+      {/* Trend */}
+      <section className="trend" id="trend">
+        <h2 className="heading">🔥 trending 🔥</h2>
 
-        <div className="swiper gallery-slider">
+        <Slider slides={Slides} />
+
+        {/* <div className="swiper gallery-slider">
           <div className="swiper-wrapper">
             <div className="swiper-slide slide">
               <div className="image">
@@ -113,77 +126,10 @@ export default function Home(props) {
 
           <div className="swiper-button-next"></div>
           <div className="swiper-button-prev"></div>
-        </div>
-      </section>
-      {/* End of Gallery */}
-      {/* Lukisan */}
-      <section className="lukisan" id="lukisan">
-        <h2 className="heading">Lukisan</h2>
-
-        <div className="box-container">
-          <div className="box">
-            <img src="gambar/seele.png" alt="" />
-            <div className="content">
-              <h3>seele</h3>
-              <a
-                href="https://honkai-star-rail.fandom.com/wiki/Seele"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="btn"
-              >
-                see details
-              </a>
-            </div>
-          </div>
-
-          <div className="box">
-            <img src="gambar/galeri2.jpg" alt="" />
-            <div className="content">
-              <h3>m. yatim</h3>
-              <a
-                href="https://medanartdirectory.wordpress.com/2015/01/01/yatim-mustafa/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="btn"
-              >
-                see details
-              </a>
-            </div>
-          </div>
-
-          <div className="box">
-            <img src="gambar/galeri3.jpg" alt="" />
-            <div className="content">
-              <h3>hendrik hermanus joel</h3>
-              <a
-                href="https://id.wikipedia.org/wiki/Henk_Ngantung"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="btn"
-              >
-                see details
-              </a>
-            </div>
-          </div>
-
-          <div className="box">
-            <img src="gambar/galeri4.jpg" alt="" />
-            <div className="content">
-              <h3>basoeki abdullah</h3>
-              <a
-                href="https://id.wikipedia.org/wiki/Basuki_Abdullah"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="btn"
-              >
-                see details
-              </a>
-            </div>
-          </div>
-        </div>
+        </div> */}
       </section>
 
-      {/* End of Lukisan */}
+      {/* End of Trend */}
     </React.StrictMode>
   );
 }

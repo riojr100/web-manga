@@ -16,7 +16,6 @@
   outline: none;
   border: none;
   text-decoration: none;
-  text-transform: capitalize;
   transition: 0.09s linear;
 }
 
@@ -103,8 +102,8 @@ section {
 }
 
 .lol img {
-  height: 100px;
-  width: 100px;
+  height: 1000px;
+  width: 1000px;
 }
 
 @keyframes lolmove {
@@ -139,7 +138,7 @@ section {
 }
 
 .header .logo {
-  font-size: 1.5rem;
+  font-size: 2.5rem;
   font-weight: 400;
   color: var(--black);
 }
@@ -240,7 +239,7 @@ section {
   min-height: 100vh;
   align-items: center;
   display: flex;
-  background: url(https://images2.imgbox.com/3d/1a/yFrizTqm_o.png) no-repeat;
+  background: url(https://images2.imgbox.com/a9/13/RDDe65Zd_o.png) no-repeat;
   opacity: 80%;
   background-size: cover;
   background-position: top;
@@ -284,6 +283,8 @@ section {
   align-items: center;
   flex-wrap: wrap;
   gap: 6rem;
+  margin-top: 100px;
+  margin-bottom: 50px;
 }
 
 .about .deco-title {
@@ -323,6 +324,7 @@ section {
 
 .about .content p {
   font-size: 1.7rem;
+  text-align: justify;
   color: #444;
   padding: 1rem 0;
   line-height: 2;
@@ -356,34 +358,57 @@ section {
   font-weight: bold;
 }
 
+@media (max-width: 991px) {
+  .about {
+    margin-top: -10px;
+    margin-bottom: -10px;
+  }
+
+  .about .box-container {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 6rem;
+  }
+}
+
 /* ABOUT END */
 
 /* GALLERY */
 
-.gallery {
+.trend {
   background: var(--bg);
 }
 
-.gallery h2 {
+.trend h2 {
   color: var(--black);
-  font-weight: 500;
+  font-weight: 5000;
+  padding-bottom: 40px;
   font-family: "Montserrat", sans-serif;
 }
 
-.gallery .slide .image {
+.trend .slide .image {
   height: 30rem;
   overflow: hidden;
   position: relative;
 }
+.swiper {
+  width: 100%;
+}
 
-.gallery .slide .image img {
-  height: 100%;
+.slide-image {
+  max-height: 450px;
   width: 100%;
   object-fit: cover;
 }
 
-.swiper-button-next,
+.swiper-button-next {
+  background-color: white;
+  color: var(--white);
+}
+
 .swiper-button-prev {
+  background-color: white;
   color: var(--white);
 }
 
@@ -641,11 +666,20 @@ section {
   section {
     padding: 8rem 2rem;
   }
+  .lol img {
+    height: 0px;
+    width: 0px;
+  }
 }
 
 @media (max-width: 768px) {
   #menu-btn {
     display: inline-block;
+  }
+
+  .lol img {
+    height: 0px;
+    width: 0px;
   }
 
   .header .navbar {
@@ -807,71 +841,52 @@ section {
 /* End of searchCard.jsx */
 
 /* info.jsx */
+@media screen and (max-width: 1000px) {
+  .container-info {
+    display: flex;
+    flex-direction: column !important;
+    align-items: center;
+  }
+}
+@media screen and (max-width: 560px) {
+  .title-info {
+    font-size: large !important;
+    text-align: center;
+  }
+}
+
 .container-info {
   width: 100%;
   height: max-content;
-  margin-top: 6.5rem;
+  margin: 6.5rem 10rem 10rem 10rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 60px;
+}
+.details-info {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  justify-content: space-around;
+  gap: 20px;
+}
+.image-info img {
+  width: 30rem;
+  height: 42.7rem;
+}
+.title-info {
+  font-size: xx-large;
+}
+.desc-info {
+  font-size: large;
+}
+.release-info,
+.genre-info,
+.theme-info,
+.status-info {
+  font-size: medium;
 }
 
 /* End of info.jsx */
 
 /* Footer about us */
-
-.footerAboutUs {
-  position: absolute;
-  top: 0;
-  width: 100%;
-  text-align: center;
-  background-color: white;
-  z-index: 1;
-  padding: 16px;
-  margin-top: 10rem;
-}
-
-.footerAboutUs p {
-  margin: 0;
-  text-align: center;
-  font-size: 5rem;
-  font-family: sans-serif;
-  font-weight: bold;
-}
-
-.member-list {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  margin-top: 25rem;
-}
-
-.member-card {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  margin: 16px;
-  padding: 16px;
-  width: 200px;
-  height: 300px;
-  border-radius: 10px;
-  background: #493e7e;
-  box-shadow: 17px 17px 51px #322b57, -17px -17px 51px #6051a5;
-}
-
-.member-card img {
-  width: 100%;
-  height: auto;
-  border-radius: 50%;
-  margin-bottom: 16px;
-}
-
-.member-card h3,
-.member-card p {
-  text-align: center;
-  margin: 0;
-  font-size: 15px;
-  color: white;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-}

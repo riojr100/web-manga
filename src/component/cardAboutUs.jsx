@@ -31,7 +31,7 @@ const members = [
 const Footer = () => {
   return (
     <div className="footerAboutUs">
-      <p>About Us</p>
+      <p>About Us --- WOI BAGI IDE DESIGN PLS</p>
     </div>
   );
 };

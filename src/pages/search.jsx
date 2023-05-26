@@ -22,16 +22,6 @@ export default function Search() {
       });
     }
   };
-
-  function handleClick(val) {
-    // const API_ENDPOINT = "https://manga-api-omega.vercel.app";
-    // console.log(val);
-    // fetch(`${API_ENDPOINT}/manga/mangadex/${val}`)
-    //   .then((data) => data.json())
-    //   .then((data) => {
-    //     setArrF(data.results);
-    //   });
-  }
   return (
     <React.StrictMode>
       <Header />
