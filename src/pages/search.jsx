@@ -4,26 +4,24 @@ import Header from "../component/header";
 import SearchCard from "../component/searchCard";
 import "../style.css";
 
-import { getMangaList, searchManga } from "../api";
+import { getMangaList } from "../api";
 
 export default function Search() {
   const [searchValue, setSearchValue] = useState("");
   const [mangaList, setMangaList] = useState([]);
   useEffect(() => {
-    getMangaList("a").then((res) => {
+    getMangaList(searchValue.toString()).then((res) => {
       setMangaList(res.results);
     });
-  }, []);
+  }, [searchValue]);
 
   const RenderMangaList = () => {
-    useEffect(() => {
-      if (mangaList) {
-        mangaList.map((key, index) => {
-          console.log(key.id);
-          return <SearchCard key={index} title={key.title} id={key.id} />;
-        });
-      }
-    }, []);
+    if (mangaList) {
+      console.log(mangaList);
+      return mangaList.map((key, index) => {
+        return <SearchCard key={index} title={key.title} id={key.id} />;
+      });
+    }
   };
 
   // function handleClick(val) {
