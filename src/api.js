@@ -4,7 +4,7 @@ export const getMangaList = async (query) => {
   return list.json();
 };
 
-export const getMangaImg = async (query) => {
+export const getMangaInfo = async (query) => {
   const img = await fetch(`${API_ENDPOINT}/manga/mangadex/info/${query}`);
   return img.json();
 };

@@ -691,7 +691,7 @@ section {
   }
 }
 
-/* search.js */
+/* search.jsx */
 @media (max-width: 705px) {
   .searchBar {
     width: 40rem;
@@ -707,7 +707,7 @@ section {
     width: 35rem;
   }
 }
-.dimScreen {
+.dimScreen-search {
   position: fixed;
   padding: 0;
   margin: 0;
@@ -718,7 +718,7 @@ section {
 
   width: 100%;
   height: 100%;
-  background: rgb(96, 4, 4);
+  background: rgb(61, 61, 61);
 }
 .container-search {
   width: 100%;
@@ -766,7 +766,7 @@ section {
   gap: 15px;
 }
 
-/* End of search.js */
+/* End of search.jsx */
 /* searchCard.jsx */
 .search-card,
 .search-card-image {
@@ -777,18 +777,20 @@ section {
 }
 .search-card {
   margin-top: 10px;
+  box-shadow: -4px 13px 11px 3px rgba(0, 0, 0, 0.29);
+  -webkit-box-shadow: -4px 13px 11px 3px rgba(0, 0, 0, 0.29);
 }
 .search-card-title h2 {
   width: 100%;
-
+  box-shadow: 0 5px 5px 0 rgba(0, 0, 0, 0.123);
   text-overflow: ellipsis;
   overflow: hidden;
   white-space: nowrap;
 
   font-size: large;
-  padding-left: 2px;
-  padding-right: 2px;
-  padding-top: 6px;
+  padding-left: 8px;
+  padding-right: 8px;
+  padding-top: 10px;
   padding-bottom: 4px;
   background: linear-gradient(
     180deg,
@@ -803,6 +805,18 @@ section {
 }
 
 /* End of searchCard.jsx */
+
+/* info.jsx */
+.container-info {
+  width: 100%;
+  height: max-content;
+  margin-top: 6.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* End of info.jsx */
 
 /* Footer about us */
 
