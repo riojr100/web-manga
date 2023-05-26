@@ -1,26 +1,41 @@
 import React, { useEffect, useState } from "react";
+
 import Header from "../component/header";
 import SearchCard from "../component/searchCard";
 import "../style.css";
 
-function printCards(x, item) {}
-const initial = new Array(20);
+import { getMangaList, searchManga } from "../api";
+
 export default function Search() {
   const [searchValue, setSearchValue] = useState("");
-  const [arrayValue, setArrayValue] = useState(initial);
-  const setArrF = (val) => {
-    const arr = val;
-    setArrayValue(arr);
+  const [mangaList, setMangaList] = useState([]);
+  useEffect(() => {
+    getMangaList("a").then((res) => {
+      setMangaList(res.results);
+    });
+  }, []);
+
+  const RenderMangaList = () => {
+    useEffect(() => {
+      if (mangaList) {
+        mangaList.map((key, index) => {
+          console.log(key.id);
+          return <SearchCard key={index} title={key.title} id={key.id} />;
+        });
+      }
+    }, []);
   };
-  function handleClick(val) {
-    const API_ENDPOINT = "https://manga-api-omega.vercel.app";
-    console.log(val);
-    fetch(`${API_ENDPOINT}/manga/mangadex/${val}`)
-      .then((data) => data.json())
-      .then((data) => {
-        setArrF(data.results);
-      });
-  }
+
+  // function handleClick(val) {
+  //   setArrayValue(getMangaList(val));
+  //   // const API_ENDPOINT = "https://manga-api-omega.vercel.app";
+  //   // console.log(val);
+  //   // fetch(`${API_ENDPOINT}/manga/mangadex/${val}`)
+  //   //   .then((data) => data.json())
+  //   //   .then((data) => {
+  //   //     setArrF(data.results);
+  //   //   });
+  // }
   return (
     <React.StrictMode>
       <Header />
@@ -40,7 +55,7 @@ export default function Search() {
             type="submit"
             className="searchButton"
             onClick={() => {
-              handleClick(searchValue, setArrayValue);
+              // handleClick()
             }}
           >
             <svg
@@ -55,19 +70,7 @@ export default function Search() {
           </button>
         </div>
         <div className="searchContent">
-          {/* <SearchCard /> */}
-          {/* Res : */}
-
-          {useEffect(() => {
-            if (arrayValue != null) {
-              if (arrayValue[0] != null) {
-                console.log(arrayValue);
-                // arrayValue.map(printCards);
-              } else {
-                console.log("Empty");
-              }
-            }
-          }, arrayValue)}
+          <RenderMangaList />
         </div>
       </div>
     </React.StrictMode>
