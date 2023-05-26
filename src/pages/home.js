@@ -28,10 +28,10 @@ import Slider from "../component/Slider";
 export default function Home(props) {
   return (
     <React.StrictMode>
-      <div className="lol" id="lol">
+      {/* <div className="lol" id="lol">
         <a href="gacor777.org"></a>
         <img src="https://res.cloudinary.com/dm6cjn57q/image/upload/v1671276133/hasilslot_ysxmvi.gif" />
-      </div>
+      </div> */}
       <Header />
       {/* Home */}
       <section className="home" id="home">

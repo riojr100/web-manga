@@ -11,22 +11,14 @@ export default function Search() {
   const [mangaList, setMangaList] = useState([]);
   useEffect(() => {
     getMangaList(searchValue.toString()).then((res) => {
-      console.log(res);
-      setMangaList(res);
+      setMangaList(res.results);
     });
   }, [searchValue]);
 
   const RenderMangaList = () => {
     if (mangaList) {
       return mangaList.map((key, index) => {
-        return (
-          <SearchCard
-            key={index}
-            title={key.title}
-            image={key.picture_url}
-            id={key.myanimelist_id}
-          />
-        );
+        return <SearchCard key={index} title={key.title} id={key.id} />;
       });
     }
   };
