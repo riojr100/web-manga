@@ -871,14 +871,19 @@ section {
   gap: 20px;
 }
 .image-info img {
-  width: 30rem;
-  height: 42.7rem;
+  transform: rotate(2deg);
+  margin: 15px;
+  padding: 0 5px;
+  float: right;
+  background: #ddd;
+  border: 1px solid #222;
+  box-shadow: 3px 3px 0 #222;
 }
 .title-info {
   font-size: xx-large;
 }
 .desc-info {
-  font-size: large;
+  font-size: medium;
 }
 .release-info,
 .genre-info,

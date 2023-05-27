@@ -1,12 +1,5 @@
 import React, { useEffect, useState } from "react";
 import "../style.css";
-// Variable:
-// image={info.image} -- Gambar
-// title={info.title} -- Judul Manga
-// release={info.releaseDate} -- Tanggal rilis
-// genre={info.genre} -- Genre
-// themes={info.themes} -- Tema
-// status={info.status} -- Status (ongoing/completed) [string]
 export default function info(props) {
   const [genres, setGenres] = useState([]);
   const [themes, setThemes] = useState([]);
@@ -14,16 +7,23 @@ export default function info(props) {
     setGenres(props.genre);
     setThemes(props.themes);
   }, []);
-
   const RenderGenre = () => {
+    let temp = [];
     if (genres) {
-      return <p>Genre : {genres.join(", ")}</p>;
+      temp = genres.map((key, index) => {
+        return key.name;
+      });
     }
+    return <p>Genre : {temp.join(", ")}</p>;
   };
   const RenderTheme = () => {
+    let temp = [];
     if (themes) {
-      return <p>Themes : {themes.join(", ")}</p>;
+      temp = themes.map((key, index) => {
+        return key.name;
+      });
     }
+    return <p>Theme : {temp.join(", ")}</p>;
   };
 
   return (
@@ -39,7 +39,7 @@ export default function info(props) {
               <h1>{props.title}</h1>
             </div>
             <div className="desc-info">
-              <p>{props.desc}</p>
+              <p>{props.synopsis}</p>
             </div>
           </div>
           <div className="lower">
