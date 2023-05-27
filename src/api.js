@@ -1,5 +1,7 @@
-const API_ENDPOINT = "https://manga-api-omega.vercel.app";
 // const API_ENDPOINT = "https://api.consumet.org";
+// const API_ENDPOINT = "https://manga-api-omega.vercel.app"; //api yg akan dipakai jika tidak work
+
+const API_ENDPOINT = "https://api-uas-tau.vercel.app";
 
 export const getMangaList = async (query) => {
   const list = await fetch(`${API_ENDPOINT}/manga/mangadex/${query}`);
@@ -9,6 +11,11 @@ export const getMangaList = async (query) => {
 export const getMangaInfo = async (query) => {
   const img = await fetch(`${API_ENDPOINT}/manga/mangadex/info/${query}`);
   return img.json();
+};
+
+export const getMangaRecommendation = async () => {
+  const list = await fetch(`${API_ENDPOINT}/manga/recommendation`);
+  return list;
 };
 
 // const url = "https://api.jikan.moe/v4";

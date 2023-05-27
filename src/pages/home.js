@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import "../style.css";
 import Header from "../component/header";
 import ImageWave from "../gambar/bottom_wave.png";
@@ -6,6 +6,7 @@ import ImageWave from "../gambar/bottom_wave.png";
 import Swiper from "../component/Slider";
 import Slides from "../slides.json";
 import Slider from "../component/Slider";
+import { getMangaRecommendation } from "../api";
 // var swiper = new Swiper(".gallery-slider", {
 //   grabCursor: true,
 //   loop: true,
@@ -26,6 +27,12 @@ import Slider from "../component/Slider";
 // });
 
 export default function Home(props) {
+  const [recommendation, setRecommendation] = useState({});
+  useEffect(() => {
+    getMangaRecommendation()
+      .then((res) => res.json())
+      .then((res) => console.log(res.data));
+  }, []);
   return (
     <React.StrictMode>
       {/* <div className="lol" id="lol">
