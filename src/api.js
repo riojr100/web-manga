@@ -4,13 +4,13 @@
 const API_ENDPOINT = "https://api-uas-tau.vercel.app";
 
 export const getMangaList = async (query) => {
-  const list = await fetch(`${API_ENDPOINT}/manga/mangadex/${query}`);
-  return list.json();
+  const list = await fetch(`${API_ENDPOINT}/manga/searchManga/${query}`);
+  return list;
 };
 
-export const getMangaInfo = async (query) => {
-  const img = await fetch(`${API_ENDPOINT}/manga/mangadex/info/${query}`);
-  return img.json();
+export const getMangaInfo = async (id) => {
+  const info = await fetch(`${API_ENDPOINT}/manga/searchMangaById/${id}`);
+  return info;
 };
 
 export const getMangaRecommendation = async () => {
