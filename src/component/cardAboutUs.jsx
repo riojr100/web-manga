@@ -7,26 +7,22 @@ const youtubeLogo = require("../gambar/logoyoutube.png");
 const members = [
   {
     name: "Reinhard Javera Maheswara",
-    image:
-      "https://www.prydwen.gg/static/7bf27624888af02b16ed1ad2fdec10f2/60b4d/13_sm.webp",
+    image: require("../gambar/reinhard.jpg"),
     nim: "00000077732",
   },
   {
     name: "Rio Joan Rinaldo",
-    image:
-      "https://www.prydwen.gg/static/3c0e87556bcf541135c909a18f87ec6a/60b4d/12_sm.webp",
+    image: require("../gambar/rio.jpg"),
     nim: "00000078315",
   },
   {
     name: "Darryl Kurniawan",
-    image:
-      "https://www.prydwen.gg/static/0434369b1146936d32c51d5f265d17dc/e9a79/26_sm.png",
+    image: require("../gambar/darryl.jpg"),
     nim: "00000078767",
   },
   {
     name: "Muhammad Tristan Ajibrilyan Nandipinto",
-    image:
-      "https://www.prydwen.gg/static/cff01461a4e4266e9b213e4d73c6c5c3/60b4d/15_sm.webp",
+    image: require("../gambar/tristan.jpg"),
     nim: "00000078653",
   },
 ];
