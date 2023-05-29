@@ -20,7 +20,7 @@ export default function info() {
         setPublished(data.data.published.prop.from.year);
         setImage(data.data.images.jpg.image_url);
         // console.log(data.data.images.jpg.image_url);
-        console.log(data.data);
+        // console.log(data.data.authors);
       });
   }, []);
 
@@ -37,6 +37,7 @@ export default function info() {
           themes={info.themes}
           status={info.status}
           type={info.type}
+          authors={info.authors}
           chapters={info.chapters}
           volumes={info.volumes}
         />

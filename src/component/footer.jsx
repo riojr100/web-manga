@@ -21,8 +21,7 @@ export default function Header(props) {
   return (
     <footer className="footer">
       <nav className="navbar2">
-        <a href="/">Home</a>
-        <a href="/search">Search</a>
+        <a href="/">Home</a> ⨂<a href="/search">Search</a> ⨂
         <a href="/aboutus">About Us</a>
       </nav>
     </footer>

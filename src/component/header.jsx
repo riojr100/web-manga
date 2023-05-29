@@ -19,21 +19,21 @@ window.onscroll = () => {
   navbar.classList.remove("active");
 };
 
-// sessionStorage.setItem("username", "");
-// sessionStorage.clear();
+if (localStorage.getItem("username") === null) {
+  localStorage.clear();
+  localStorage.setItem("username", "");
+}
 
 export default function Header(props) {
+  const storedItems = localStorage.getItem("username");
   const [textBox, setTextbox] = useState("");
-  const [username, setUsername] = useState("");
-  if (sessionStorage.getItem("username") !== null) {
-    // let user = sessionStorage.getItem("username");
-    // setUsername(user);
-  }
+  const [username, setUsername] = useState("Welcome, " + storedItems);
 
-  useEffect(() => {
-    // const user = username;
-    // sessionStorage.setItem("username", user);
-  }, [username]);
+  const submitHandler = (e) => {
+    e.preventDefault();
+    setUsername("Welcome, " + textBox);
+    localStorage.setItem("username", textBox);
+  };
 
   return (
     <header className="header">
@@ -48,13 +48,13 @@ export default function Header(props) {
       </nav>
 
       <div className="icons">
-        <div id="login-btn" className="fas fa-user" onClick={loginButton}>
-          {username}
-        </div>
+        <div id="login-btn" className="fas fa-user" onClick={loginButton}></div>
         <div id="menu-btn" className="fas fa-bars" onClick={menuButton}></div>
       </div>
-      <div action="" className="login-form">
-        <h3>Set Username</h3>
+      <form onSubmit={submitHandler} className="login-form">
+        <h3>
+          {localStorage.getItem("username") == "" ? "Set Username" : username}
+        </h3>
 
         <input
           onChange={(e) => {
@@ -74,7 +74,7 @@ export default function Header(props) {
           <label htmlFor="remember-me">ingat saya</label>
         </div> */}
         <button className="btn">Set</button>
-      </div>
+      </form>
     </header>
   );
 }

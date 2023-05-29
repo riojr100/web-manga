@@ -7,7 +7,7 @@
   top: 0;
   width: 100%;
   text-align: center;
-  background-color: rgb(121, 121, 121);
+  background-color: rgb(61, 61, 61);
   z-index: 1;
   margin-top: 7rem;
   padding-top: 10px;
@@ -52,16 +52,17 @@
 
 .member-card:hover {
   border-radius: 10px;
-  cursor: pointer;
   transform: scale(1.2);
 }
 
 .member-card img {
-  width: 100%;
+  width: 90%;
   height: auto;
   margin-bottom: 16px;
   border-color: white;
   border-radius: 50%;
+  cursor: pointer;
+  border: 3px solid rgb(255, 255, 255);
 }
 
 .member-card h3,

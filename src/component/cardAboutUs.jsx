@@ -1,5 +1,4 @@
 import React from "react";
-import Header from "../component/header";
 
 const instagramLogo = require("../gambar/logoinstagram.png");
 const youtubeLogo = require("../gambar/logoyoutube.png");
@@ -81,7 +80,6 @@ const MemberCard = ({ name, image, nim, instagram, youtube, index }) => {
 const AboutUs = () => {
   return (
     <div className="mainAbout">
-      <Header />
       <Footer />
       <div className="member-list">
         {members.map((member, index) => (

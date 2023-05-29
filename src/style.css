@@ -44,11 +44,13 @@ section {
 }
 
 .container {
-  background: url(https://wallpapercave.com/dwp1x/wp8502109.jpg);
+  background: url(https://wallpapercave.com/dwp1x/wp8502109.jpg) no-repeat;
   width: 100%;
   height: max-content;
   margin-top: 6.5rem;
   display: flex;
+  justify-content: center;
+  background-size: cover;
 }
 
 .heading {
@@ -191,7 +193,6 @@ section {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 2rem 9%;
 }
 
 .footer .navbar2 a {
@@ -876,7 +877,7 @@ section {
 /* info.jsx */
 @media screen and (max-width: 1000px) {
   .info-background {
-    background: url(https://wallpapercave.com/dwp1x/wp8502109.jpg) no-repeat;
+    /* background: url(https://wallpapercave.com/dwp1x/wp8502109.jpg) no-repeat; */
     z-index: 100;
     background-size: cover;
     display: flex;
@@ -896,14 +897,16 @@ section {
 }
 
 .info-background {
-  background: url(https://wallpapercave.com/dwp1x/wp8502109.jpg) no-repeat;
+  /* background: url(https://wallpapercave.com/dwp1x/wp8502109.jpg) no-repeat; */
+  /* opacity: 80%; */
   z-index: 100;
   background-size: cover;
   display: flex;
+  flex-direction: row;
+  justify-content: center;
 }
 
 .container-info {
-  left: 500;
   width: 100%;
   height: max-content;
   margin: 6.5rem 10rem 10rem 10rem;
@@ -915,7 +918,9 @@ section {
 }
 
 .details-info {
-  border-style: double solid solid double;
+  max-width: 1250px;
+  border-style: double;
+  border-radius: 25px;
   padding: 15px;
   display: flex;
   flex-direction: column;
@@ -928,10 +933,11 @@ section {
 .image-container {
   background-color: rgb(253, 238, 104);
   max-width: 500px;
-  /* background-position-y: ; */
   z-index: -100;
+  display: flex;
+  align-items: center;
+  /* background-position-y: ; */
 }
-
 .image-info img {
   transform: rotate(2deg);
   margin: 15px;
@@ -947,7 +953,7 @@ section {
 }
 
 .desc-container {
-  background-color: ;
+  /* background-color: ; */
   border-color: #000;
   border-width: 1cm;
 }
@@ -957,13 +963,14 @@ section {
   font-size: xx-large;
 }
 .desc-info {
-  color: #444;
+  color: #2c2c2c;
   font-size: medium;
 }
 .release-info,
 .genre-info,
 .theme-info,
-.status-info {
+.status-info,
+.authors {
   font-size: medium;
 }
 
