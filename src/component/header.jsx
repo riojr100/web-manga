@@ -1,3 +1,5 @@
+import { useEffect, useState } from "react";
+
 function loginButton() {
   let login = document.querySelector(".login-form");
   let navbar = document.querySelector(".header .navbar");
@@ -17,10 +19,25 @@ window.onscroll = () => {
   navbar.classList.remove("active");
 };
 
+// sessionStorage.setItem("username", "");
+// sessionStorage.clear();
+
 export default function Header(props) {
+  const [textBox, setTextbox] = useState("");
+  const [username, setUsername] = useState("");
+  if (sessionStorage.getItem("username") !== null) {
+    // let user = sessionStorage.getItem("username");
+    // setUsername(user);
+  }
+
+  useEffect(() => {
+    // const user = username;
+    // sessionStorage.setItem("username", user);
+  }, [username]);
+
   return (
     <header className="header">
-      <a href="#" className="logo">
+      <a href="/" className="logo">
         <i className="fas fa-book"></i> U-MangaLog
       </a>
 
@@ -31,26 +48,33 @@ export default function Header(props) {
       </nav>
 
       <div className="icons">
-        <div id="login-btn" className="fas fa-user" onClick={loginButton}></div>
+        <div id="login-btn" className="fas fa-user" onClick={loginButton}>
+          {username}
+        </div>
         <div id="menu-btn" className="fas fa-bars" onClick={menuButton}></div>
       </div>
-      <form action="" className="login-form">
-        <h3>login</h3>
+      <div action="" className="login-form">
+        <h3>Set Username</h3>
 
-        <input type="email" placeholder="Masukkan email" className="box" />
         <input
+          onChange={(e) => {
+            setTextbox(e.target.value);
+          }}
+          type="text"
+          placeholder="Masukkan Username"
+          className="box"
+        />
+        {/* <input
           type="password"
           placeholder="Masukkan password"
           className="box"
-        />
-        <div className="remember">
+        /> */}
+        {/* <div className="remember">
           <input type="checkbox" name="" id="remember-me" />
           <label htmlFor="remember-me">ingat saya</label>
-        </div>
-        <a href="#" className="btn">
-          login
-        </a>
-      </form>
+        </div> */}
+        <button className="btn">Set</button>
+      </div>
     </header>
   );
 }

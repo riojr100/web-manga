@@ -1,7 +1,10 @@
 import React, { useState, useEffect } from "react";
 import Header from "../component/header";
+import Footer from "../component/footer";
 import InfoComp from "../component/infoComp";
 import { getMangaInfo } from "../api";
+import Slides from "../slides.json";
+import Slider from "../component/Slider";
 
 export default function info() {
   let query = window.location.search;
@@ -46,6 +49,11 @@ export default function info() {
       <div className="container">
         <RenderInfo />
       </div>
+      <section className="trend" id="trend">
+        <h2 className="heading">📚 Catalogue</h2>
+        <Slider slides={Slides} />
+      </section>
+      <Footer />
     </React.StrictMode>
   );
 }

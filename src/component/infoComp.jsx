@@ -29,30 +29,37 @@ export default function info(props) {
   return (
     <React.StrictMode>
       <div className="dimScreen-info"></div>
-      <div className="container-info">
-        <div className="image-info">
-          <img src={props.image} alt={props.title} />
-        </div>
-        <div className="details-info">
-          <div className="info-upper">
-            <div className="title-info">
-              <h1>{props.title}</h1>
-            </div>
-            <div className="desc-info">
-              <p>{props.synopsis}</p>
+      <div className="info-background">
+        <div className="container-info">
+          <div className="image-container">
+            <div className="image-info">
+              <img src={props.image} alt={props.title} />
             </div>
           </div>
-          <div className="lower">
-            <div className="release-info">
-              <p>Release Date : {props.release}</p>
+          <div className="details-info">
+            <div className="info-upper">
+              <div className="title-info">
+                <h1>{props.title}</h1>
+              </div>
+              <div className="space"></div>
+              <div className="desc-container">
+                <div className="desc-info">
+                  <p>{props.synopsis}</p>
+                </div>
+              </div>
             </div>
-            <div className="genre-info">
-              <RenderGenre />
+            <div className="lower">
+              <div className="release-info">
+                <p>Release Date : {props.release}</p>
+              </div>
+              <div className="genre-info">
+                <RenderGenre />
+              </div>
+              <div className="theme-info">
+                <RenderTheme />
+              </div>
+              <div className="status-info">Status : {props.status}</div>
             </div>
-            <div className="theme-info">
-              <RenderTheme />
-            </div>
-            <div className="status-info">Status : {props.status}</div>
           </div>
         </div>
       </div>

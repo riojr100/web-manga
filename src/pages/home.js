@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import "../style.css";
 import Header from "../component/header";
+import Footer from "../component/footer";
 import ImageWave from "../gambar/bottom_wave.png";
 import Slides from "../slides.json";
 import Slider from "../component/Slider";
@@ -85,7 +86,7 @@ export default function Home(props) {
       {/* End of About */}
       {/* Trend */}
       <section className="trend" id="trend">
-        <h2 className="heading">🔥 trending 🔥</h2>
+        <h2 className="heading">📚 Catalogue</h2>
 
         <Slider slides={Slides} />
 
@@ -126,7 +127,7 @@ export default function Home(props) {
           <div className="swiper-button-prev"></div>
         </div> */}
       </section>
-
+      <Footer />
       {/* End of Trend */}
     </React.StrictMode>
   );

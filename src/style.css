@@ -44,6 +44,7 @@ section {
 }
 
 .container {
+  background: url(https://wallpapercave.com/dwp1x/wp8502109.jpg);
   width: 100%;
   height: max-content;
   margin-top: 6.5rem;
@@ -175,6 +176,33 @@ section {
 
 #menu-btn {
   display: none;
+}
+
+/* footer */
+
+.footer {
+  /* position: static; */
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  background: var(--white);
+  box-shadow: var(--box-shadow);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem 9%;
+}
+
+.footer .navbar2 a {
+  font-weight: 300;
+  font-size: 1.7rem;
+  color: var(--black);
+  margin: 0 1rem;
+}
+
+.footer .navbar2 a:hover {
+  color: var(--main);
 }
 
 /* LOGIN FORM DI ATAS KANAN */
@@ -741,6 +769,11 @@ section {
     width: 35rem;
   }
 }
+
+.dimScreen-info {
+  background: url(https://images2.imgbox.com/a9/13/RDDe65Zd_o.png) no-repeat;
+}
+
 .dimScreen-search {
   position: fixed;
   padding: 0;
@@ -842,6 +875,13 @@ section {
 
 /* info.jsx */
 @media screen and (max-width: 1000px) {
+  .info-background {
+    background: url(https://wallpapercave.com/dwp1x/wp8502109.jpg) no-repeat;
+    z-index: 100;
+    background-size: cover;
+    display: flex;
+  }
+
   .container-info {
     display: flex;
     flex-direction: column !important;
@@ -855,7 +895,15 @@ section {
   }
 }
 
+.info-background {
+  background: url(https://wallpapercave.com/dwp1x/wp8502109.jpg) no-repeat;
+  z-index: 100;
+  background-size: cover;
+  display: flex;
+}
+
 .container-info {
+  left: 500;
   width: 100%;
   height: max-content;
   margin: 6.5rem 10rem 10rem 10rem;
@@ -863,13 +911,27 @@ section {
   flex-direction: row;
   justify-content: center;
   gap: 60px;
+  z-index: -1000;
 }
+
 .details-info {
+  border-style: double solid solid double;
+  padding: 15px;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
   gap: 20px;
+  text-align: justify;
+  background-color: #ffffff;
 }
+
+.image-container {
+  background-color: rgb(253, 238, 104);
+  max-width: 500px;
+  /* background-position-y: ; */
+  z-index: -100;
+}
+
 .image-info img {
   transform: rotate(2deg);
   margin: 15px;
@@ -879,10 +941,23 @@ section {
   border: 1px solid #222;
   box-shadow: 3px 3px 0 #222;
 }
+
+.space {
+  height: 20px;
+}
+
+.desc-container {
+  background-color: ;
+  border-color: #000;
+  border-width: 1cm;
+}
+
 .title-info {
+  margin-top: -10px;
   font-size: xx-large;
 }
 .desc-info {
+  color: #444;
   font-size: medium;
 }
 .release-info,
