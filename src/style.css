@@ -760,7 +760,7 @@ section {
     width: 40rem;
   }
   .searchContent {
-    width: 65rem;
+    width: 50%;
     flex-direction: column !important;
     align-items: center;
   }
@@ -826,11 +826,12 @@ section {
   width: 100%;
 }
 .searchContent {
-  width: 1110px;
+  width: 80%;
   flex-wrap: wrap;
   padding-top: 2rem;
   display: flex;
   flex-direction: row;
+  justify-content: center;
   gap: 15px;
 }
 

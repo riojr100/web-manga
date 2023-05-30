@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from "react";
-import Footer from "../component/footer";
 import Header from "../component/header";
 import SearchCard from "../component/searchCard";
 import "../style.css";
