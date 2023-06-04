@@ -1,21 +1,21 @@
-function loginButton() {
-  let login = document.querySelector(".login-form");
-  let navbar = document.querySelector(".header .navbar");
-  login.classList.toggle("active");
-  navbar.classList.remove("active");
-}
-function menuButton() {
-  let login = document.querySelector(".login-form");
-  let navbar = document.querySelector(".header .navbar");
-  login.classList.remove("active");
-  navbar.classList.toggle("active");
-}
-window.onscroll = () => {
-  let login = document.querySelector(".login-form");
-  let navbar = document.querySelector(".header .navbar");
-  login.classList.remove("active");
-  navbar.classList.remove("active");
-};
+// function loginButton() {
+//   let login = document.querySelector(".login-form");
+//   let navbar = document.querySelector(".header .navbar");
+//   login.classList.toggle("active");
+//   navbar.classList.remove("active");
+// }
+// function menuButton() {
+//   let login = document.querySelector(".login-form");
+//   let navbar = document.querySelector(".header .navbar");
+//   login.classList.remove("active");
+//   navbar.classList.toggle("active");
+// }
+// window.onscroll = () => {
+//   let login = document.querySelector(".login-form");
+//   let navbar = document.querySelector(".header .navbar");
+//   login.classList.remove("active");
+//   navbar.classList.remove("active");
+// };
 
 export default function Header(props) {
   return (

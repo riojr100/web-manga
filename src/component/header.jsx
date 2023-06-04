@@ -42,9 +42,17 @@ export default function Header(props) {
       </a>
 
       <nav className="navbar">
-        <a href="/">Home</a>
-        <a href="/search">Search</a>
-        <a href="/aboutus">About Us</a>
+        <ul className="navbarList">
+          <li>
+            <a href="/">Home</a>
+          </li>
+          <li>
+            <a href="/search">Search</a>
+          </li>
+          <li>
+            <a href="/aboutus">About Us</a>
+          </li>
+        </ul>
       </nav>
 
       <div className="icons">

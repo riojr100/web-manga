@@ -132,9 +132,19 @@ section {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 2rem 9%;
+  padding: 20px;
 }
 
+.navbar ul {
+  padding-right: 125px;
+}
+
+li,
+a {
+  display: inline;
+  list-style-type: none;
+  text-decoration: none;
+}
 .header .a {
   font-size: 2.5rem;
   color: var(--black);
@@ -155,6 +165,7 @@ section {
 }
 
 .header .navbar a {
+  display: inline-block;
   font-weight: 300;
   font-size: 1.7rem;
   color: var(--black);
@@ -166,6 +177,7 @@ section {
 }
 
 .header .icons div {
+  left: 0;
   font-size: 2.5rem;
   margin-left: 1.7rem;
   cursor: pointer;
@@ -193,6 +205,10 @@ section {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+.navbar2 {
+  padding-left: 9px;
 }
 
 .footer .navbar2 a {
@@ -275,7 +291,50 @@ section {
 }
 
 .home .content {
+  padding: 20px;
   max-width: 60rem;
+}
+
+.content-background {
+  opacity: 90%;
+  position: absolute;
+  width: 450px;
+  height: 400px;
+  background-color: #000000;
+  z-index: -100;
+}
+
+@media (max-width: 768px) {
+  .content-background {
+    opacity: 90%;
+    position: absolute;
+    width: 400px;
+    height: 320px;
+    background-color: #000000;
+    z-index: -100;
+  }
+}
+
+@media (max-width: 450px) {
+  .content-background {
+    opacity: 90%;
+    position: absolute;
+    width: 370px;
+    height: 300px;
+    background-color: #000000;
+    z-index: -100;
+  }
+}
+
+@media (max-width: 374px) {
+  .content-background {
+    opacity: 90%;
+    position: absolute;
+    width: 320px;
+    height: 320px;
+    background-color: #000000;
+    z-index: -100;
+  }
 }
 
 .home .content h3 {

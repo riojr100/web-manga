@@ -34,6 +34,7 @@ export default function Home(props) {
       <Header />
       {/* Home */}
       <section className="home" id="home">
+        <div className="content-background"></div>
         <div className="content">
           <h3>U-Manga Log</h3>
 
