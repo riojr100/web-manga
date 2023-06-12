@@ -42,13 +42,13 @@ export default function Search() {
 
       <div className="dimScreen-search"></div>
       <div className="container-search">
-        <div
+        {/* <div
           style={{
             height: 100,
             width: 10,
             backgroundColor: "black",
           }}
-        ></div>
+        ></div> */}
         <div className="searchForm">
           <input
             type="text"

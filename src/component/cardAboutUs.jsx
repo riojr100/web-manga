@@ -62,7 +62,10 @@ const MemberCard = ({ name, image, nim, instagram, youtube, index }) => {
 
   return (
     <div className="member-card">
-      <img src={image} alt={name} />
+      <div className="profile-img">
+        <img src={image} alt={name} />
+      </div>
+
       <h3>{name}</h3>
       <p>{nim}</p>
       <div className="social-button-container">
