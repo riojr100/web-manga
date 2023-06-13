@@ -813,6 +813,18 @@ a {
   }
 }
 
+/* emptyComp.jsx */
+.emptyText {
+  color: white;
+}
+/* End of emptyComp.jsx */
+
+/* errorComp.jsx */
+.errorText {
+  color: white;
+}
+/* end of errorComp.jsx */
+
 /* search.jsx */
 @media (max-width: 705px) {
   .searchBar {
@@ -855,6 +867,7 @@ a {
   flex-direction: column;
   align-items: center;
 }
+
 .searchBar,
 .searchButton {
   background-color: rgba(0, 100, 166, 0.838);

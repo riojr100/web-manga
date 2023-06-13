@@ -44,7 +44,7 @@ export default function info(props) {
         <div className="container-info">
           <div className="image-container">
             <div className="image-info">
-              <img src={props.image} alt={props.title} />
+              <img src={props.image} alt={props.title} title={props.title} />
             </div>
           </div>
           <div className="details-info">

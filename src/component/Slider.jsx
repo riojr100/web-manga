@@ -22,7 +22,7 @@ export default function Slider({ slides }) {
 
   return (
     <Swiper
-      modules={[Navigation, Pagination, Scrollbar, A11y]}
+      modules={[Navigation, Scrollbar, A11y]}
       spaceBetween={10}
       slidesPerView={4}
       navigation
@@ -45,7 +45,7 @@ export default function Slider({ slides }) {
               <img
                 className="slide-image"
                 src={value.entry[0].images.jpg.image_url}
-                alt={value.entry[0].title}
+                titl={value.entry[0].title}
               />
             </a>
           </SwiperSlide>

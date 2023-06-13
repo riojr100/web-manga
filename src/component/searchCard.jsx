@@ -4,7 +4,7 @@ import "../style.css";
 export default function searchCard(props) {
   return (
     <React.StrictMode>
-      <div className="search-card" key={props.key}>
+      <div className="search-card" key={props.keys}>
         <a href={`/info/?id=${props.id}`}>
           <img
             src={props.image}
